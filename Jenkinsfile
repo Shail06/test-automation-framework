@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       agent any
       steps {
-        sh 'source /etc/profile.d/maven.sh'
+        sh '''/bin/bash
+source /etc/profile.d/maven.sh'''
       }
     }
     stage('test') {

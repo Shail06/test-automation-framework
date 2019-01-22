@@ -2,8 +2,14 @@ pipeline {
   agent any
   stages {
     stage('test') {
+      agent {
+        docker {
+          image 'maven:3.3-jdk-8'
+        }
+
+      }
       steps {
-        echo 'Test Step'
+        sh 'mvn clean verify'
       }
     }
     stage('finish') {

@@ -1,15 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.6.0-jdk-10-slim'
-    }
-
-  }
+  agent any
   stages {
     stage('test') {
       agent {
         docker {
-          image '3.6.0-jdk-8-alpine'
+          image 'maven:3.6.0-jdk-10-slim'
         }
 
       }

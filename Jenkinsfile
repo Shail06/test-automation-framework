@@ -14,7 +14,7 @@ pipeline {
 
       }
       steps {
-        sh 'service docker start'
+        sh 'mvn --version'
       }
     }
     stage('finish') {

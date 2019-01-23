@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        sh 'mvn --version'
+        sh 'mvn clean verify'
       }
     }
     stage('finish') {

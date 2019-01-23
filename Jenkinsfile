@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image '3.6.0-jdk-8-alpine'
+      image 'maven:3.6.0-jdk-10-slim'
     }
 
   }

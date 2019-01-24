@@ -1,13 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'maven:3.6.0-jdk-10-slim'
+    }
+
+  }
   stages {
     stage('test') {
-      agent {
-        docker {
-          image 'maven:3.6.0-jdk-10-slim'
-        }
-
-      }
       steps {
         sh 'mvn clean verify'
       }

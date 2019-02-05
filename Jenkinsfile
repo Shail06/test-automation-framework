@@ -8,12 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'mvn clean'
-      }
-    }
-    stage('test') {
-      steps {
-        sh 'mvn verify'
+        sh 'mvn clean verify'
       }
     }
     stage('finish') {
